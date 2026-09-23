@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://waterlong.0910pass.workers.dev/sitemap.xml
