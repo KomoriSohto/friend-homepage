@@ -327,6 +327,72 @@
                 gap: 14px;
             }
         }
+
+        @media (max-width: 640px) {
+            .container {
+                width: min(100% - 20px, 1120px);
+            }
+            header {
+                position: static;
+            }
+            .header-inner {
+                padding: 14px 0;
+            }
+            nav {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px 12px;
+                font-size: 0.85rem;
+            }
+            nav a {
+                display: block;
+                padding: 8px 10px;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.05);
+                text-align: center;
+            }
+            .hero {
+                padding: 72px 0 60px;
+            }
+            h1 {
+                font-size: clamp(2rem, 9vw, 2.9rem);
+            }
+            .lead {
+                font-size: 1rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-actions .btn,
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 68px 0;
+            }
+            .service-card,
+            .faq-item,
+            .feature-box,
+            .contact-panel {
+                padding: 20px 16px;
+            }
+            .feature-item {
+                align-items: flex-start;
+            }
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head> 
 <body>
