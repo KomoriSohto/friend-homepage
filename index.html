@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>聖工業 | 会社案内</title>
-    <meta name="description" content="聖工業の会社案内です。外壁・内装・屋根・防水・工事全般に対応し、安心してご相談いただける施工をご提供します。" />
-    <meta name="keywords" content="聖工業, 工事, 外壁, 内装, 屋根, 防水, 鉄骨, 床, 建築" />
+    <meta name="description" content="聖工業は福山市で塗装工事全般、外壁塗装、屋根塗装、内装塗装、各種リフォーム、不用品回収処分に対応。安心してご相談いただける施工をご提供します。" />
+    <meta name="keywords" content="聖工業, 塗装工事, 外壁塗装, 屋根塗装, 内装塗装, リフォーム, 不用品回収処分, 福山市" />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="聖工業 | 会社案内" />
-    <meta property="og:description" content="聖工業の会社案内です。外壁・内装・屋根・防水・工事全般に対応し、安心してご相談いただけます。" />
+    <meta property="og:description" content="福山市で塗装工事、リフォーム、不用品回収処分に対応。安心してご相談いただける施工をご提供します。" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
     <style>
         :root {
             --navy: #0f172a;
@@ -59,6 +60,30 @@
             font-weight: 800;
             font-size: clamp(1.2rem, 2vw, 1.6rem);
             letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: 0.3s ease;
+            gap: 10px;
+        }
+        .brand:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .brand img {
+            max-height: 40px;
+            width: auto;
+            max-width: 180px;
+            display: block;
+            margin: 0;
+            opacity: 0.95;
+        }
+        .brand-text {
+            color: var(--white);
+            font-weight: 800;
+            font-size: clamp(0.95rem, 1.5vw, 1.2rem);
         }
         nav {
             display: flex;
@@ -66,6 +91,7 @@
             gap: 24px;
             font-size: 0.95rem;
             color: #e2e8f0;
+            align-items: center;
         }
         .btn {
             display: inline-block;
@@ -188,8 +214,18 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(220px, 1fr));
+            grid-template-columns: repeat(4, minmax(200px, 1fr));
             gap: 24px;
+        }
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(180px, 1fr));
+            }
+        }
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
         .service-card {
             background: var(--white);
@@ -312,7 +348,6 @@
         @media (max-width: 900px) {
             .hero-grid,
             .feature-box,
-            .services-grid,
             .mini-grid,
             .faq {
                 grid-template-columns: 1fr;
@@ -336,6 +371,12 @@
             .header-inner {
                 padding: 14px 0;
             }
+            .brand img {
+                max-height: 35px;
+            }
+            .brand-text {
+                font-size: 0.9rem;
+            }
             nav {
                 width: 100%;
                 display: grid;
@@ -351,13 +392,13 @@
                 text-align: center;
             }
             .hero {
-                padding: 72px 0 60px;
+                padding: 60px 0 50px;
             }
             h1 {
-                font-size: clamp(2rem, 9vw, 2.9rem);
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
             }
             .lead {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             .hero-actions {
                 flex-direction: column;
@@ -372,7 +413,7 @@
                 grid-template-columns: 1fr;
             }
             section {
-                padding: 68px 0;
+                padding: 60px 0;
             }
             .service-card,
             .faq-item,
@@ -396,11 +437,13 @@
 <body>
     <header>
         <div class="container header-inner">
-            <div class="brand">聖工業</div>
+            <div class="brand">
+                <img src="logo.jpg" alt="聖工業" />
+                <span class="brand-text">聖工業</span>
+            </div>
             <nav aria-label="グローバルナビゲーション">
                 <a href="#service">事業内容</a>
                 <a href="#strength">会社案内</a>
-                <a href="#about">対応範囲</a>
                 <a href="#faq">よくあるご質問</a>
                 <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
             </nav>
@@ -411,26 +454,11 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div>
-                    <div class="eyebrow" style="color:#facc15; display:inline-block; margin-bottom:12px;">建築工事・内装・防水</div>
+                    <div class="eyebrow" style="color:#facc15; display:inline-block; margin-bottom:12px;">設備補修工事・仕上工事・鍛冶工事</div>
                     <h1>安心してご相談いただける<br />工事のご対応をいたします</h1>
-                    <p class="lead">聖工業では、外壁・内装・屋根・防水・床・鉄骨などの工事を、丁寧な対応と適切なご提案のもとで承っております。ご希望の内容に合わせて、安心してご相談いただけます。</p>
+                    <p class="lead">聖工業では、塗装工事全般・外壁塗装・屋根塗装・内装塗装・各種リフォーム・不用品回収処分など、幅広い工事を、丁寧な対応と適切なご提案のもとで承っております。ご希望の内容に合わせて、安心してご相談いただけます。</p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn">お問い合わせ</a>
-                        <a href="#about" class="btn btn-secondary">会社案内</a>
-                    </div>
-                    <div class="stats" aria-label="会社概要の数値">
-                        <div class="stat">
-                            <strong>会社名</strong>
-                            <span>聖工業</span>
-                        </div>
-                        <div class="stat">
-                            <strong>代表者</strong>
-                            <span>水長 億人</span>
-                        </div>
-                        <div class="stat">
-                            <strong>所在地</strong>
-                            <span>福山市</span>
-                        </div>
                     </div>
                 </div>
 
@@ -439,8 +467,9 @@
                     <ul class="check-list">
                         <li>会社名：聖工業</li>
                         <li>代表者：水長 億人</li>
+                        <li>電話番号：080-8244-4290</li>
                         <li>所在地：〒720-0074 広島県福山市北本庄5丁目2-5</li>
-                        <li>業務範囲：外壁・内装・屋根・防水・工事全般</li>
+                        <li>業務範囲：設備補修工事・仕上工事・鍛冶工事</li>
                     </ul>
                 </aside>
             </div>
@@ -450,30 +479,30 @@
             <div class="container">
                 <div class="section-head">
                     <span class="eyebrow">Service</span>
-                    <h2>対応範囲</h2>
-                    <p>建築・内装・防水・仕上げまで、幅広い工事に対応しております。</p>
+                    <h2>事業内容</h2>
+                    <p>塗装工事、リフォーム、不用品回収処分など、幅広い工事に対応しております。</p>
                 </div>
 
                 <div class="services-grid">
                     <article class="service-card">
+                        <div class="service-icon">�</div>
+                        <h3>外壁塗装</h3>
+                        <p>建物の美観と耐久性を守る外壁塗装を、丁寧に施工いたします。</p>
+                    </article>
+                    <article class="service-card">
                         <div class="service-icon">🏠</div>
-                        <h3>外壁工事</h3>
-                        <p>外観の維持と美観を考えた施工を、丁寧に行います。</p>
+                        <h3>内装塗装</h3>
+                        <p>空間の雰囲気を引き出す内装塗装を、品質を重視して承ります。</p>
                     </article>
                     <article class="service-card">
-                        <div class="service-icon">🛠️</div>
-                        <h3>内装工事</h3>
-                        <p>空間の使いやすさや仕上がりを考慮した施工を承ります。</p>
+                        <div class="service-icon">⛳</div>
+                        <h3>屋根塗装</h3>
+                        <p>劣化対策と美観維持を両立させた屋根塗装で、長く安心を提供します。</p>
                     </article>
                     <article class="service-card">
-                        <div class="service-icon">🏗️</div>
-                        <h3>屋根工事</h3>
-                        <p>雨漏りや劣化の対策に加え、安心して長く使える状態を目指します。</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-icon">🧱</div>
-                        <h3>防水工事</h3>
-                        <p>施工後の安心を見据え、基礎から仕上げまで丁寧に対応します。</p>
+                        <div class="service-icon">♻️</div>
+                        <h3>不用品回収処分</h3>
+                        <p>不要な品々を適切に回収・処分し、スッキリとした環境をお作りします。</p>
                     </article>
                 </div>
             </div>
@@ -489,7 +518,7 @@
                 <div class="feature-box">
                     <div>
                         <h3>安心してお任せいただける施工体制</h3>
-                        <p>聖工業では、工事の内容に応じて適切なご提案と丁寧な対応を心がけております。外壁・内装・屋根・防水・床・鉄骨など、さまざまな施工に対応し、現場に合わせた進め方をご提案します。</p>
+                        <p>聖工業では、工事の内容に応じて適切なご提案と丁寧な対応を心がけております。塗装工事全般、各種リフォーム、不用品回収処分など、さまざまな施工に対応し、現場に合わせた進め方をご提案します。</p>
                         <div class="feature-list">
                             <div class="feature-item">
                                 <div class="feature-badge">✓</div>
@@ -524,8 +553,8 @@
                                 <span>聖工業</span>
                             </div>
                             <div>
-                                <strong>代表</strong>
-                                <span>水長 億人</span>
+                                <strong>電話番号</strong>
+                                <span>080-8244-4290</span>
                             </div>
                             <div>
                                 <strong>所在地</strong>
@@ -537,55 +566,37 @@
             </div>
         </section>
 
-        <section id="about">
-            <div class="container">
-                <div class="section-head">
-                    <span class="eyebrow">Profile</span>
-                    <h2>会社情報</h2>
-                </div>
-                <div class="faq">
-                    <div class="faq-item">
-                        <h3>会社名</h3>
-                        <p>聖工業</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>代表者</h3>
-                        <p>水長 億人</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>所在地</h3>
-                        <p>〒720-0074 広島県福山市北本庄5丁目2-5</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>事業内容</h3>
-                        <p>外壁工事、内装工事、屋根工事、防水工事、床工事、鉄骨工事、工事全般</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="faq">
             <div class="container">
                 <div class="section-head">
                     <span class="eyebrow">FAQ</span>
                     <h2>よくあるご質問</h2>
+                    <p>お客様からよくいただくご質問にお答えしています。</p>
                 </div>
                 <div class="faq">
                     <article class="faq-item">
-                        <h3>どのような工事に対応していますか？</h3>
-                        <p>外壁、内装、屋根、防水、床、鉄骨など、工事全般に対応しております。</p>
+                        <h3>塗装工事の費用は？</h3>
+                        <p>施工内容や面積によって異なります。まずはご相談いただき、現場確認のうえ、丁寧にご説明いたします。</p>
                     </article>
                     <article class="faq-item">
-                        <h3>まずは何をすればよいですか？</h3>
-                        <p>ご相談内容や施工箇所をお知らせください。必要に応じて、適切なご案内をいたします。</p>
+                        <h3>工事期間はどのくらい？</h3>
+                        <p>工事の内容や規模により異なります。ご相談の際に、詳しい工期目安をお伝えいたします。</p>
                     </article>
                     <article class="faq-item">
-                        <h3>見積もりは可能ですか？</h3>
-                        <p>はい、内容に応じてご相談のうえ、丁寧にご案内いたします。</p>
+                        <h3>外壁塗装はどのくらいの周期で行えば？</h3>
+                        <p>一般的には7～10年程度が目安ですが、建物の状態により異なります。劣化が見られたら、まずはご相談ください。</p>
                     </article>
                     <article class="faq-item">
-                        <h3>ご連絡はどのようにすればよいですか？</h3>
-                        <p>お問い合わせよりご連絡いただければ、担当者がご対応いたします。</p>
+                        <h3>小さな補修も対応してもらえますか？</h3>
+                        <p>はい、小規模な補修や点検もお気軽にご相談ください。丁寧に対応いたします。</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>見積もりは無料ですか？</h3>
+                        <p>はい、見積もりは無料です。お気軽にお問い合わせください。</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>不用品回収処分のみの利用も可能ですか？</h3>
+                        <p>はい、不用品の回収・処分のみのご依頼もお受けしております。ご気軽にお問い合わせください。</p>
                     </article>
                 </div>
             </div>
@@ -597,6 +608,7 @@
             <div>
                 <div style="font-weight:800; color:#fff; margin-bottom:8px;">聖工業</div>
                 <div>〒720-0074 広島県福山市北本庄5丁目2-5</div>
+                <div>TEL: 080-8244-4290</div>
             </div>
             <div>© 2026 聖工業</div>
         </div>
