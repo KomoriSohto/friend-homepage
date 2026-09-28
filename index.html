@@ -11,19 +11,46 @@
     <meta property="og:description" content="福山市で塗装工事、リフォーム、不用品回収処分に対応。安心してご相談いただける施工をご提供します。" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://waterlong.0910pass.workers.dev/logo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "聖工業",
+      "image": "https://waterlong.0910pass.workers.dev/logo.jpg",
+      "description": "福山市で塗装工事全般、外壁塗装、屋根塗装、内装塗装、各種リフォーム、不用品回収処分に対応。安心してご相談いただける施工をご提供します。",
+      "telephone": "080-8244-4290",
+      "url": "https://waterlong.0910pass.workers.dev/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP",
+        "addressLocality": "福山市",
+        "addressRegion": "広島県",
+        "postalCode": "720-0074",
+        "streetAddress": "北本庄5丁目2-5"
+      },
+      "sameAs": [
+      ],
+      "priceRange": "¥¥",
+      "areaServed": {
+        "@type": "City",
+        "name": "福山市"
+      }
+    }
+    </script>
     <style>
         :root {
-            --navy: #0f172a;
-            --dark: #1e293b;
-            --steel: #475569;
-            --line: #e2e8f0;
-            --bg: #f8fafc;
-            --accent: #d97706;
-            --accent-soft: #fef3c7;
-            --white: #ffffff;
-            --success: #166534;
+            --navy: #FFFFFF;
+            --dark: #222222;
+            --steel: #555555;
+            --line: #E0E0E0;
+            --bg: #FFFFFF;
+            --accent: #66CC00;
+            --accent-soft: #F5FFF0;
+            --white: #FFFFFF;
+            --success: #66CC00;
         }
 
         * { box-sizing: border-box; }
@@ -42,12 +69,13 @@
             margin: 0 auto;
         }
         header {
-            background: var(--navy);
-            color: var(--white);
+            background: var(--white);
+            color: var(--dark);
             position: sticky;
             top: 0;
             z-index: 10;
-            box-shadow: 0 2px 14px rgba(15,23,42,0.12);
+            box-shadow: 0 2px 8px rgba(102, 204, 0, 0.2);
+            border-bottom: 3px solid var(--accent);
         }
         .header-inner {
             display: flex;
@@ -64,13 +92,13 @@
             align-items: center;
             margin: 0;
             padding: 8px 12px;
-            background: rgba(255, 255, 255, 0.08);
+            background: transparent;
             border-radius: 12px;
             transition: 0.3s ease;
             gap: 10px;
         }
         .brand:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(102, 204, 0, 0.1);
         }
         .brand img {
             max-height: 40px;
@@ -81,16 +109,26 @@
             opacity: 0.95;
         }
         .brand-text {
-            color: var(--white);
+            color: var(--dark);
             font-weight: 800;
             font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+            font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .brand-subtitle {
+            font-size: clamp(0.55rem, 0.9vw, 0.75rem);
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            font-family: "Segoe UI", sans-serif;
         }
         nav {
             display: flex;
             flex-wrap: wrap;
             gap: 24px;
             font-size: 0.95rem;
-            color: #e2e8f0;
+            color: var(--dark);
             align-items: center;
         }
         .btn {
@@ -107,13 +145,13 @@
         .btn:hover { opacity: 0.92; }
         .btn-secondary {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.6);
-            color: var(--white);
+            border: 1px solid var(--accent);
+            color: var(--dark);
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(15,23,42,0.88), rgba(30,41,59,0.82)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: var(--white);
+            background: linear-gradient(135deg, rgba(102, 204, 0, 0.1), rgba(150, 230, 80, 0.15)), url('bg1.jpg') center/cover no-repeat;
+            color: var(--dark);
             padding: 110px 0 80px;
         }
         .hero-grid {
@@ -122,16 +160,23 @@
             gap: 36px;
             align-items: center;
         }
+        .hero-grid > div:first-child {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
         h1 {
             margin: 0 0 18px;
             font-size: clamp(2.3rem, 5vw, 4.2rem);
             line-height: 1.2;
             letter-spacing: 0.02em;
+            color: var(--white);
         }
         .lead {
             font-size: 1.1rem;
             max-width: 600px;
-            color: rgba(255,255,255,0.9);
+            color: var(--white);
             margin-bottom: 30px;
         }
         .hero-actions {
@@ -146,10 +191,12 @@
             gap: 18px;
         }
         .stat {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--white);
+            border: 1px solid var(--line);
             border-radius: 20px;
             padding: 18px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
         }
         .stat strong {
             display: block;
@@ -158,15 +205,16 @@
         }
 
         .hero-card {
-            background: rgba(255,255,255,0.09);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: var(--white);
+            border: 2px solid var(--accent);
             border-radius: 28px;
             padding: 28px;
-            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(102, 204, 0, 0.1);
         }
         .hero-card h3 {
             margin-top: 0;
             font-size: 1.2rem;
+            color: var(--accent);
         }
         .check-list {
             list-style: none;
@@ -232,7 +280,12 @@
             border: 1px solid var(--line);
             border-radius: 22px;
             padding: 28px 22px;
-            box-shadow: 0 8px 22px rgba(15,23,42,0.04);
+            box-shadow: 0 2px 8px rgba(102, 204, 0, 0.1);
+            transition: 0.3s ease;
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 16px rgba(102, 204, 0, 0.15);
+            transform: translateY(-2px);
         }
         .service-icon {
             width: 56px;
@@ -252,9 +305,20 @@
             margin: 0;
             color: var(--steel);
         }
+        .service-category {
+            margin-bottom: 50px;
+        }
+        .service-category h3 {
+            font-size: 1.4rem;
+            margin: 0 0 24px;
+            color: var(--accent);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+        }
 
         .feature-area {
-            background: #eef2ff;
+            background: var(--accent-soft);
         }
         .feature-box {
             background: var(--white);
@@ -293,7 +357,7 @@
             font-weight: 800;
         }
         .contact-panel {
-            background: linear-gradient(135deg, #0f172a, #1f2937);
+            background: linear-gradient(135deg, #66CC00, #7FDD3F);
             color: var(--white);
             border-radius: 28px;
             padding: 28px;
@@ -326,6 +390,7 @@
             border: 1px solid var(--line);
             border-radius: 18px;
             padding: 24px 22px;
+            box-shadow: 0 2px 8px rgba(102, 204, 0, 0.08);
         }
         .faq-item h3 {
             margin-top: 0;
@@ -333,9 +398,74 @@
             font-size: 1.1rem;
         }
 
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 28px;
+        }
+        .portfolio-item {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(102, 204, 0, 0.08);
+        }
+        .portfolio-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .portfolio-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/2;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .portfolio-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .portfolio-item-desc {
+            padding: 20px;
+        }
+        .portfolio-item-desc h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .portfolio-item-desc p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--steel);
+        }
+
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .portfolio-pair {
+                grid-template-columns: 1fr;
+            }
+        }
+
         footer {
-            background: var(--navy);
-            color: rgba(255,255,255,0.82);
+            background: var(--accent);
+            color: var(--white);
             padding: 32px 0 48px;
         }
         .footer-inner {
@@ -439,7 +569,10 @@
         <div class="container header-inner">
             <div class="brand">
                 <img src="logo.jpg" alt="聖工業" />
-                <span class="brand-text">聖工業</span>
+                <div class="brand-text">
+                    <span>聖工業</span>
+                    <span class="brand-subtitle">HIZIRI</span>
+                </div>
             </div>
             <nav aria-label="グローバルナビゲーション">
                 <a href="#service">事業内容</a>
@@ -454,9 +587,9 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div>
-                    <div class="eyebrow" style="color:#facc15; display:inline-block; margin-bottom:12px;">設備補修工事・仕上工事・鍛冶工事</div>
+                    <div class="eyebrow" style="color:#facc15; display:inline-block; margin-bottom:12px;">プラント工場・屋外工事に対応</div>
                     <h1>安心してご相談いただける<br />工事のご対応をいたします</h1>
-                    <p class="lead">聖工業では、塗装工事全般・外壁塗装・屋根塗装・内装塗装・各種リフォーム・不用品回収処分など、幅広い工事を、丁寧な対応と適切なご提案のもとで承っております。ご希望の内容に合わせて、安心してご相談いただけます。</p>
+                    <p class="lead">聖工業では、プラント工場での設備補修工事・仕上工事・鍛冶工事から、屋外の塗装工事全般・外壁塗装・屋根塗装・内装塗装・各種リフォーム・不用品回収処分まで、幅広い工事を丁寧に承っております。ご希望の内容に合わせて、安心してご相談いただけます。</p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn">お問い合わせ</a>
                     </div>
@@ -469,7 +602,8 @@
                         <li>代表者：水長 億人</li>
                         <li>電話番号：080-8244-4290</li>
                         <li>所在地：〒720-0074 広島県福山市北本庄5丁目2-5</li>
-                        <li>業務範囲：設備補修工事・仕上工事・鍛冶工事</li>
+                        <li>業務範囲（工場）：設備補修工事・仕上工事・鍛冶工事</li>
+                        <li>業務範囲（屋外）：塗装工事全般・外壁塗装・屋根塗装・内装塗装・各種リフォーム・不用品回収処分</li>
                     </ul>
                 </aside>
             </div>
@@ -480,7 +614,7 @@
                 <div class="section-head">
                     <span class="eyebrow">Service</span>
                     <h2>事業内容</h2>
-                    <p>塗装工事、リフォーム、不用品回収処分など、幅広い工事に対応しております。</p>
+                    <p>プラント工場から屋外工事まで、多岐にわたる施工に対応しております。</p>
                 </div>
 
                 <div class="services-grid">
@@ -518,7 +652,7 @@
                 <div class="feature-box">
                     <div>
                         <h3>安心してお任せいただける施工体制</h3>
-                        <p>聖工業では、工事の内容に応じて適切なご提案と丁寧な対応を心がけております。塗装工事全般、各種リフォーム、不用品回収処分など、さまざまな施工に対応し、現場に合わせた進め方をご提案します。</p>
+                        <p>聖工業では、プラント工場での設備補修工事から屋外の塗装工事まで、幅広い施工に対応しています。工事の内容に応じて適切なご提案と丁寧な対応を心がけ、現場に合わせた進め方をご提案します。</p>
                         <div class="feature-list">
                             <div class="feature-item">
                                 <div class="feature-badge">✓</div>
@@ -566,6 +700,50 @@
             </div>
         </section>
 
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Portfolio</span>
+                    <h2>施工実績</h2>
+                    <p>これまでの施工実績をご紹介します。</p>
+                </div>
+                <div class="portfolio-grid">
+                    <article class="portfolio-item">
+                        <div class="portfolio-pair">
+                            <div class="portfolio-image">
+                                <img src="before1.jpg" alt="施工前1" />
+                                <div class="portfolio-label">施工前</div>
+                            </div>
+                            <div class="portfolio-image">
+                                <img src="after1.jpg" alt="施工後1" />
+                                <div class="portfolio-label" style="background: rgba(102, 204, 0, 0.8);">施工後</div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-desc">
+                            <h3>外壁塗装工事</h3>
+                            <p>外壁の塗装工事で新築同然の美しさを実現しました。</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item">
+                        <div class="portfolio-pair">
+                            <div class="portfolio-image">
+                                <img src="before2.jpg" alt="施工前2" />
+                                <div class="portfolio-label">施工前</div>
+                            </div>
+                            <div class="portfolio-image">
+                                <img src="after2.jpg" alt="施工後2" />
+                                <div class="portfolio-label" style="background: rgba(102, 204, 0, 0.8);">施工後</div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-desc">
+                            <h3>屋根塗装工事</h3>
+                            <p>劣化した屋根を丁寧に塗装し、耐久性を回復させました。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="faq">
             <div class="container">
                 <div class="section-head">
@@ -584,7 +762,7 @@
                     </article>
                     <article class="faq-item">
                         <h3>外壁塗装はどのくらいの周期で行えば？</h3>
-                        <p>一般的には7～10年程度が目安ですが、建物の状態により異なります。劣化が見られたら、まずはご相談ください。</p>
+                        <p>一般的には築10～15年が目安です。特に築10年は「手遅れになる前」の重要なタイミング。建物の劣化が加速する前に、早めのメンテナンスをおすすめします。建物の状態により異なりますので、まずはご相談ください。</p>
                     </article>
                     <article class="faq-item">
                         <h3>小さな補修も対応してもらえますか？</h3>
